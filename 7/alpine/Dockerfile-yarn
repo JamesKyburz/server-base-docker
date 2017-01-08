@@ -1,0 +1,15 @@
+from node:7.4-alpine
+
+maintainer James Kyburz "james.kyburz@gmail.com"
+
+RUN apk add --update bash curl tar gnupg && \
+    rm -rf /var/cache/apk/*
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+ENV PATH "$PATH:/root/.yarn/bin"
+
+ONBUILD WORKDIR /usr/src/app
+ONBUILD ADD yarn.lock package.json /usr/src/app/
+ONBUILD RUN yarn install
+ONBUILD ADD . /usr/src/app
+ONBUILD CMD yarn start
