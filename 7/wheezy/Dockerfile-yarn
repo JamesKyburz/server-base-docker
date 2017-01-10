@@ -4,7 +4,7 @@ maintainer James Kyburz "james.kyburz@gmail.com"
 
 RUN apt-get update &&\
   apt-get install -y --force-yes --no-install-recommends\
-  curl ssh &&\
+  curl &&\
   rm -rf /var/lib/apt/lists/*
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
