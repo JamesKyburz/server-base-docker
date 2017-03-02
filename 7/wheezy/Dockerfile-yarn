@@ -1,4 +1,4 @@
-from node:7.4-wheezy
+from node:7.7-wheezy
 
 maintainer James Kyburz "james.kyburz@gmail.com"
 
