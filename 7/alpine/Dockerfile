@@ -1,4 +1,4 @@
-from node:7.7-alpine
+from node:7.8-alpine
 
 maintainer James Kyburz "james.kyburz@gmail.com"
 
