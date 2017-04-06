@@ -1,4 +1,4 @@
-from node:6.9-alpine
+from node:6.10-alpine
 
 maintainer James Kyburz "james.kyburz@gmail.com"
 
@@ -13,6 +13,7 @@ ONBUILD WORKDIR /usr/src/app
 ONBUILD ADD yarn.lock package.json /usr/src/app/
 ONBUILD RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
+  npm install --quiet node-gyp -g &&\
   yarn install && \
   apk del native-deps
 ONBUILD ADD . /usr/src/app
