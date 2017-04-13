@@ -7,7 +7,7 @@
 ### Create a `Dockerfile` in your Node.js app project
 
 ```dockerfile
-FROM jameskyburz/server-base:7.4-alpine-npm
+FROM jameskyburz/server-base:7.9-alpine-npm
 EXPOSE 8888
 ```
 
@@ -23,7 +23,7 @@ EXPOSE 8888
 ### Create a `Dockerfile` in your Node.js app project
 
 ```dockerfile
-FROM jameskyburz/server-base:7.4-alpine-yarn
+FROM jameskyburz/server-base:7.9-alpine-yarn
 EXPOSE 8888
 ```
 
